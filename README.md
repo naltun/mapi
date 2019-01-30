@@ -1,13 +1,13 @@
 # M-API
 
 ### What is it?
-_Monitor API_ let's you monitor your system via a RESTful API!
+_Monitor API_ let's you monitor your system via a RESTful API.
 
 This project uses the lovely Rust for the backend and the venerated Ruby for the web server...
 
-Did I mention this program uses [FFI programming](https://en.wikipedia.org/wiki/Foreign_function_interface)? It's a Frankenstein of a project of Rust + Ruby, and the benchmark may be _no bueno_...
+Did I mention this program uses [FFI programming](https://en.wikipedia.org/wiki/Foreign_function_interface)? It's my first FFI-based project, and the performance may not be optimized.
 
-That being said, this project is to help me learn Ru{st|by} FFI programming. Is it serving its purpose? You bet!
+That being said, this project is to help me learn Ru{st|by} FFI programming. Is it serving its purpose? Absolutely.
 
 For more information on Rust FFI programming, please visit [The Rust FFI Omnibus](http://jakegoulding.com/rust-ffi-omnibus/).
 
