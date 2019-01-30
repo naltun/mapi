@@ -38,4 +38,4 @@ sinatra-reloader
 
 GNU GPLv2 because software freedom?
 
-Love your Free/Libre, Open Source Software. For more information on freedom-respecting software, please visit [Wikipedia](https://en.wikipedia.org/wiki/Free_and_open-source_software).
+Love your Free/Libre, Open Source Software. For more information on freedom-respecting software, please visit [Wikipedia](https://en.wikipedia.org/wiki/Free_software_movement).
