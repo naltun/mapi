@@ -6,6 +6,7 @@ require 'sinatra/reloader' if development?
 module MAPI
   extend FFI::Library
   ffi_lib 'lib/target/debug/libmapi.' + FFI::Platform::LIBSUFFIX
+  attach_function :get_files_count, [], :int
   attach_function :get_harddisk_avail, [], :int
   attach_function :get_ram_used, [], :int
 end
@@ -20,7 +21,9 @@ get '/cpu' do
 end
 
 get '/filescount' do
-  # fix me
+  resp = MAPI.get_files_count
+  $stdout.puts '[*] Request to /filescount called...'.colorize(:light_yellow)
+  return "File Count: #{resp}"
 end
 
 get '/hdd-available' do
