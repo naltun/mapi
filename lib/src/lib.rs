@@ -3,7 +3,7 @@ extern crate sysinfo;
 use sysinfo::{DiskExt, System, SystemExt};
 
 #[no_mangle]
-pub extern fn get_ram() -> u64 {
+pub extern fn get_ram_used() -> u64 {
     let mut sys = System::new();
     sys.refresh_all();
     let used_mem = sys.get_used_memory(); 
