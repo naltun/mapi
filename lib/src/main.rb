@@ -6,6 +6,7 @@ require 'sinatra/reloader' if development?
 module MAPI
   extend FFI::Library
   ffi_lib 'target/debug/libmapi.' + FFI::Platform::LIBSUFFIX
+  attach_function :get_harddisk_avail, [], :int
   attach_function :get_ram, [], :int
 end
 
@@ -23,7 +24,14 @@ get '/filescount' do
 end
 
 get '/harddisk' do
-  # fix me
+  avail = MAPI.get_harddisk_avail / 1024
+#   total = MAPI.get_harddisk_total
+#   used = (total - avail) / 1024
+#   resp = "Harddisk Space Total: #{total}\n" +
+# 	"Harddisk Space Available: #{avail}\n" +
+# 	"Harddisk Space Used: #{used}"
+  $stdout.puts '[*] Request to /harddisk called...'.colorize(:light_yellow)
+  return "#{avail} GB's of harddisk space available..."
 end
 
 get '/ram' do
