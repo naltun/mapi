@@ -11,6 +11,13 @@ That being said, this project is to help me learn Ru{st|by} FFI programming. Is 
 
 For more information on Rust FFI programming, please visit [The Rust FFI Omnibus](http://jakegoulding.com/rust-ffi-omnibus/).
 
+##### ATTN:
+This repository is _not_ ready for any production use, and probably never will be. For one, this is a project to help me learn FFI programming; production use should have the web server reimplemented in pure Rust.
+
+Also, features need to be implemented, such as additional system monitoring endpoints and API authorization.
+
+That said, please feel free to mess with the software.
+
 ### Installing
 There are two files you will need to use:
 * `Gemfile`, located at the project root
