@@ -5,10 +5,9 @@ else
 endif
 
 all: target/debug/libmapi.$(EXT)
-	ruby src/main.rb
 
 target/debug/libmapi.$(EXT): src/lib.rs Cargo.toml
-	cargo build
+	cargo build --release
 
 clean:
 	rm -rf target

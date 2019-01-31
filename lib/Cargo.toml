@@ -3,6 +3,9 @@ name = "m-api"
 version = "0.1.0"
 authors = ["Noah Altunian <noah@cirruslabs.io"]
 
+[profile.release]
+debug = true
+
 [lib]
 name = "mapi"
 crate-type = ["dylib"]
