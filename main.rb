@@ -11,9 +11,17 @@ module MAPI
   attach_function :get_ram_used, [], :int
 end
 
-# Retrieve all information
 get '/' do
-  # fix me
+  resp = "MAPI usage:\n" +
+         "eg. curl $SERVER_ADDR:$PORT/{endpoint}\n\n" +
+         "These endpoints can be:\n" +
+         "/cpu\n" +
+         "/filescount" +
+         "/hdd-available\n" +
+         "/ram-used\n\n" +
+         'For more information, consider visiting https://github.com/naltun/mapi'
+  $stdout.puts '[*] Request to / called...'.colorize(:light_yellow)
+  return resp
 end
 
 get '/cpu' do
